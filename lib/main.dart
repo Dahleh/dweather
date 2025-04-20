@@ -3,12 +3,13 @@ import 'package:dweather/Screens/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loader_overlay/loader_overlay.dart';
-import 'package:dweather/Providers/appdata.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
+
+GlobalKey<NavigatorState> navigatorState = GlobalKey<NavigatorState>();
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -18,11 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GlobalLoaderOverlay(
       child: MultiBlocProvider(
-        providers: [
-          BlocProvider(
-            create: (context) => AppData(),
-          ),
-        ],
+        providers: [],
         child: MaterialApp(
           title: 'DWeather',
           darkTheme: ThemeData(

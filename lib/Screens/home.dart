@@ -1,5 +1,4 @@
 import 'package:dweather/Models/weather.dart';
-import 'package:dweather/Network/app_client.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 

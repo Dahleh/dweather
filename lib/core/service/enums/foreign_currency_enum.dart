@@ -1,0 +1,1 @@
+enum ForeignCurrencyEnum { singleCurrency, multipleCurrency }
